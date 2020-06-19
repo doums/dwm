@@ -3,9 +3,10 @@
 /* appearance */
 static const unsigned int borderpx  = 4;        /* border pixel of windows */
 static const unsigned int gappx     = 14;        /* gaps between windows */
+static const int bar_pa             = 4;        /* pixel vertical padding of bar */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono:pixelsize=22:antialias=true" };
 static const char dmenufont[]       = "Inconsolata:pixelsize=22:antialias=true";
 static const char dark[]            = "#262018";
@@ -19,7 +20,7 @@ static const char *colors[][3]      = {
     [SchemeStatus]  = {white, green, "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
     [SchemeTagsSel]  = {white, dark, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
     [SchemeTagsNorm]  = {white, green, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]  = {white, dark, "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]  = {white, green, "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
     [SchemeInfoNorm]  = {white, green, "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
