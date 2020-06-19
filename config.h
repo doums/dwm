@@ -8,15 +8,19 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "JetBrains Mono:pixelsize=22:antialias=true" };
 static const char dmenufont[]       = "Inconsolata:pixelsize=22:antialias=true";
-static const char col_gray1[]       = "#262018";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
-static const char col_cyan[]        = "#374029";
+static const char dark[]            = "#262018";
+static const char green[]           = "#374029";
+static const char green_light[]     = "#425931";
+static const char white[]           = "#f2f2f0";
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  },
+	[SchemeNorm] = {white, green, green },
+	[SchemeSel]  = {white, green, green_light  },
+    [SchemeStatus]  = {white, green, "#000000"  }, // Statusbar right {text,background,not used but cannot be empty}
+    [SchemeTagsSel]  = {white, dark, "#000000"  }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeTagsNorm]  = {white, green, "#000000"  }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]  = {white, dark, "#000000"  }, // infobar middle  selected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]  = {white, green, "#000000"  }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 /* tagging */
@@ -56,7 +60,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = {"dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", dark, "-nf", green, "-sb", green, "-sf", white, NULL };
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *rofi[] = { "rofi", "-show", "drun", NULL };
 static const char *windows[] = { "rofi", "-show", "window", NULL };
