@@ -53,9 +53,10 @@ static const int resizehints = 1;
 static const int attachbelow = 1;
 
 static const Layout layouts[] = {
-        { "[]=", tile },
-        { "><>", NULL },
-        { "[M]", monocle },
+        { "[|]", tile },
+        { "[-]", bstack },
+        { "[<]", NULL },
+        { "[ ]", monocle },
         { NULL, NULL },
 };
 
@@ -99,7 +100,8 @@ static Key keys[] = {
         { MODKEY,                       XK_Tab,                    view,           {0} },
         { MODKEY,                       XK_x,                      killclient,     {0} },
         { MODKEY,                       XK_s,                      setlayout,      {.v = &layouts[0]} },
-        { MODKEY,                       XK_m,                      setlayout,      {.v = &layouts[2]} },
+        { MODKEY,                       XK_v,                      setlayout,      {.v = &layouts[1]} },
+        { MODKEY,                       XK_m,                      setlayout,      {.v = &layouts[3]} },
         { MODKEY,                       XK_space,                  cyclelayout,    {.i = +1 } },
         { MODKEY|ShiftMask,             XK_space,                  cyclelayout,    {.i = -1 } },
         { MODKEY,                       XK_f,                      togglefloating, {0} },
