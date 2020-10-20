@@ -34,6 +34,19 @@ static const Rule rules[] = {
         { "Galculator", NULL, NULL, 0, 1, -1 }
 };
 
+static const char *const autostart[] = {
+        "start-pulseaudio-x11", NULL,
+        "picom", "--config", "/home/pierre/.config/picom.conf", "-b", NULL,
+        "redshift", "-c", "/home/pierre/.config/redshift/redshift.conf", NULL,
+        "gnome-keyring-daemon", "--start", "--components=secrets", NULL,
+        "gnome-keyring-daemon", "--start", "--components=ssh", NULL,
+        "dunst", "-c", "/home/pierre/.config/dunst/dunstrc", NULL,
+        "launch_bato.sh", NULL,
+        "udiskie", NULL,
+        "set_hhkb.sh", NULL,
+        NULL // terminate
+};
+
 static const float mfact     = 0.50;
 static const int nmaster     = 1;
 static const int resizehints = 1;
