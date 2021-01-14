@@ -2,7 +2,7 @@
 
 static const unsigned int borderpx  = 4;
 static const unsigned int gappx     = 14;
-static const int bar_pa             = 8;
+static const int bar_pa             = 6;
 static const unsigned int snap      = 32;
 static const int showbar            = 1;
 static const int topbar             = 0;
@@ -91,8 +91,8 @@ static Key keys[] = {
         { MODKEY,                       XK_b,                      togglebar,      {0} },
         { MODKEY,                       XK_j,                      focusstack,     {.i = +1 } },
         { MODKEY,                       XK_k,                      focusstack,     {.i = -1 } },
-        { MODKEY,                       XK_i,                      incnmaster,     {.i = +1 } },
-        { MODKEY,                       XK_d,                      incnmaster,     {.i = -1 } },
+        { MODKEY,                       XK_semicolon,              incnmaster,     {.i = +1 } },
+        { MODKEY,                       XK_comma,                  incnmaster,     {.i = -1 } },
         { MODKEY,                       XK_h,                      setmfact,       {.f = -0.05} },
         { MODKEY,                       XK_l,                      setmfact,       {.f = +0.05} },
         { MODKEY,                       XK_Return,                 zoom,           {0} },
@@ -106,8 +106,8 @@ static Key keys[] = {
         { MODKEY,                       XK_f,                      togglefloating, {0} },
         { MODKEY,                       XK_0,                      view,           {.ui = ~0 } },
         { MODKEY|ShiftMask,             XK_0,                      tag,            {.ui = ~0 } },
-        { MODKEY,                       XK_comma,                  focusmon,       {.i = -1 } },
-        { MODKEY,                       XK_period,                 focusmon,       {.i = +1 } },
+        { MODKEY,                       XK_Left,                   focusmon,       {.i = -1 } },
+        { MODKEY,                       XK_Right,                  focusmon,       {.i = +1 } },
         { MODKEY|ShiftMask,             XK_h,                      tagmon,         {.i = -1 } },
         { MODKEY|ShiftMask,             XK_l,                      tagmon,         {.i = +1 } },
         { MODKEY,                       XK_q,                      spawn,          {.v = session } },
@@ -120,7 +120,7 @@ static Key keys[] = {
         { MODKEY|ShiftMask,             XK_l,                      spawn,          {.v = lock } },
         { 0,                            XK_Print,                  spawn,          {.v = screenshot } },
         { MODKEY,                       XK_c,                      spawn,          {.v = clip_shot } },
-        { MODKEY,                       XK_y,                      spawn,          {.v = set_dp } },
+        { MODKEY,                       XK_d,                      spawn,          {.v = set_dp } },
         { MODKEY,                       XK_asterisk,               spawn,          {.v = redshift } },
         TAGKEYS(                              XK_ampersand,              0)
         TAGKEYS(                              XK_eacute,                 1)
