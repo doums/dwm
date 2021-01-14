@@ -2,12 +2,12 @@
 
 static const unsigned int borderpx  = 4;
 static const unsigned int gappx     = 14;
-static const int bar_pa             = 10;
+static const int bar_pa             = 8;
 static const unsigned int snap      = 32;
 static const int showbar            = 1;
 static const int topbar             = 0;
-static const char *fonts[]          = { "JetBrainsMono Nerd Font:pixelsize=22:antialias=true" };
-static const char dmenufont[]       = "JetBrains Mono:pixelsize=22:antialias=true";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:pixelsize=20:antialias=true" };
+static const char dmenufont[]       = "JetBrains Mono:pixelsize=20:antialias=true";
 static const char grey[]            = "#404040";
 static const char dark_grey[]       = "#262626";
 static const char near_black[]      = "#0d0d0d";
@@ -24,7 +24,7 @@ static const char *colors[][3] = {
         [SchemeInfoSel]     = { stone, near_black, "#000000" },
         [SchemeInfoNorm]    = { stone, dark_grey, "#000000" },
 };
-static const char *tags[] = { "$", "b", "i", "s", "1", "2", "3", "4", "5" };
+static const char *tags[] = { "󰨊", "󰈹", "󱃖", "󰒱", "1", "2", "3", "4", "5" };
 
 static const Rule rules[] = {
         { "jetbrains-toolbox", NULL, NULL,0, 1, -1 },
@@ -42,6 +42,7 @@ static const char *const autostart[] = {
         "dunst", "-c", "/home/pierre/.config/dunst/dunstrc", NULL,
         "udiskie", NULL,
         "set_hhkb.sh", NULL,
+        "setxkbmap", "-I/home/pierre/Documents/hhkb/rules/", "-rules", "hhkb", "-model", "hhkb", "-layout", "hhkb", NULL,
         NULL // terminate
 };
 
@@ -51,10 +52,10 @@ static const int resizehints = 1;
 static const int attachbelow = 1;
 
 static const Layout layouts[] = {
-        { "[|]", tile },
-        { "[-]", bstack },
-        { "[<]", NULL },
-        { "[ ]", monocle },
+        { "󰃒", tile },
+        { "󰃊", bstack },
+        { "󰢡", monocle },
+        { "󰖯", NULL }, /* floating layout */
         { NULL, NULL },
 };
 
@@ -99,7 +100,7 @@ static Key keys[] = {
         { MODKEY,                       XK_x,                      killclient,     {0} },
         { MODKEY,                       XK_s,                      setlayout,      {.v = &layouts[0]} },
         { MODKEY,                       XK_v,                      setlayout,      {.v = &layouts[1]} },
-        { MODKEY,                       XK_m,                      setlayout,      {.v = &layouts[3]} },
+        { MODKEY,                       XK_m,                      setlayout,      {.v = &layouts[2]} },
         { MODKEY,                       XK_space,                  cyclelayout,    {.i = +1 } },
         { MODKEY|ShiftMask,             XK_space,                  cyclelayout,    {.i = -1 } },
         { MODKEY,                       XK_f,                      togglefloating, {0} },
@@ -107,8 +108,8 @@ static Key keys[] = {
         { MODKEY|ShiftMask,             XK_0,                      tag,            {.ui = ~0 } },
         { MODKEY,                       XK_comma,                  focusmon,       {.i = -1 } },
         { MODKEY,                       XK_period,                 focusmon,       {.i = +1 } },
-        { MODKEY|ShiftMask,             XK_comma,                  tagmon,         {.i = -1 } },
-        { MODKEY|ShiftMask,             XK_period,                 tagmon,         {.i = +1 } },
+        { MODKEY|ShiftMask,             XK_h,                      tagmon,         {.i = -1 } },
+        { MODKEY|ShiftMask,             XK_l,                      tagmon,         {.i = +1 } },
         { MODKEY,                       XK_q,                      spawn,          {.v = session } },
         { 0,                            XF86XK_MonBrightnessUp,    spawn,          {.v = light_up } },
         { 0,                            XF86XK_MonBrightnessDown,  spawn,          {.v = light_down } },
