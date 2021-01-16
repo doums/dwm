@@ -41,8 +41,6 @@ static const char *const autostart[] = {
         "gnome-keyring-daemon", "--start", "-d", NULL,
         "dunst", "-c", "/home/pierre/.config/dunst/dunstrc", NULL,
         "udiskie", NULL,
-        "set_hhkb.sh", NULL,
-        "setxkbmap", "-I/home/pierre/Documents/hhkb/rules/", "-rules", "hhkb", "-model", "hhkb", "-layout", "hhkb", NULL,
         NULL // terminate
 };
 
