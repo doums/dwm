@@ -24,7 +24,7 @@ static const char *colors[][3] = {
         [SchemeInfoSel]     = { stone, near_black, "#000000" },
         [SchemeInfoNorm]    = { stone, dark_grey, "#000000" },
 };
-static const char *tags[] = { "󰨊", "󰈹", "󱃖", "󰒱", "󰡶", "1", "2", "3", "4" };
+static const char *tags[] = { "󰞷", "󰈹", "󱃖", "󰒱", "󰡶", "1", "2", "3", "4" };
 
 static const Rule rules[] = {
         { "jetbrains-toolbox", NULL, NULL,0, 1, -1 },
@@ -50,8 +50,8 @@ static const int resizehints = 1;
 static const int attachbelow = 1;
 
 static const Layout layouts[] = {
-        { "󰧂", tile },
-        { "󰦿", bstack },
+        { "󰜴", tile },
+        { "󰜮", bstack },
         { "󰢡", monocle },
         { "󰖯", NULL }, /* floating layout */
         { NULL, NULL },
