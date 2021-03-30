@@ -31,7 +31,8 @@ static const Rule rules[] = {
         { "Pavucontrol", NULL, NULL, 0, 1, -1 },
         { "feh", NULL, NULL, 0, 1, -1 },
         { "nnn", NULL, NULL, 0, 1, -1 },
-        { "Galculator", NULL, NULL, 0, 1, -1 }
+        { "Galculator", NULL, NULL, 0, 1, -1 },
+        { "TeamSpeak 3", NULL, NULL, 0, 1, -1 }
 };
 
 static const char *const autostart[] = {
