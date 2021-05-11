@@ -24,7 +24,7 @@ static const char *colors[][3] = {
         [SchemeInfoSel]     = { stone, near_black, "#000000" },
         [SchemeInfoNorm]    = { stone, dark_grey, "#000000" },
 };
-static const char *tags[] = { "󰞷", "󰈹", "󱃖", "󰒱", "󰡶", "1", "2", "3", "4" };
+static const char *tags[] = { "󰞷", "󰈹", "󱃖", "󰒱", "a", "z", "e", "r", "󰡶" };
 
 static const Rule rules[] = {
         { "jetbrains-toolbox", NULL, NULL,0, 1, -1 },
@@ -121,15 +121,15 @@ static Key keys[] = {
         { MODKEY,                       XK_c,                      spawn,          {.v = clip_shot } },
         { MODKEY,                       XK_d,                      spawn,          {.v = set_dp } },
         { MODKEY,                       XK_asterisk,               spawn,          {.v = redshift } },
-        TAGKEYS(                              XK_ampersand,              0)
-        TAGKEYS(                              XK_eacute,                 1)
-        TAGKEYS(                              XK_quotedbl,               2)
-        TAGKEYS(                              XK_apostrophe,             3)
-        TAGKEYS(                              XK_parenleft,              4)
-        TAGKEYS(                              XK_minus,                  5)
-        TAGKEYS(                              XK_egrave,                 6)
-        TAGKEYS(                              XK_underscore,             7)
-        TAGKEYS(                              XK_ccedilla,               8)
+        TAGKEYS(                        XK_ampersand,      0)
+        TAGKEYS(                        XK_eacute,         1)
+        TAGKEYS(                        XK_quotedbl,       2)
+        TAGKEYS(                        XK_apostrophe,     3)
+        TAGKEYS(                        XK_a,              4)
+        TAGKEYS(                        XK_z,              5)
+        TAGKEYS(                        XK_e,              6)
+        TAGKEYS(                        XK_r,              7)
+        TAGKEYS(                        XK_parenleft,      8)
 };
 
 static Button buttons[] = {
