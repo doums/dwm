@@ -24,7 +24,7 @@ static const char *colors[][3] = {
         [SchemeInfoSel]     = { stone, near_black, "#000000" },
         [SchemeInfoNorm]    = { stone, dark_grey, "#000000" },
 };
-static const char *tags[] = { "󰞷", "󰈹", "󱃖", "󰒱", "a", "z", "e", "r", "󰡶" };
+static const char *tags[] = { "1", "2", "3", "4", "a", "z", "e", "r", "󱌃" };
 
 static const Rule rules[] = {
         { "jetbrains-toolbox", NULL, NULL,0, 1, -1 },
