@@ -36,7 +36,7 @@ cmake --build .
 then call it from a startup script like `.xinitrc` or `.xprofile` and pipe the provider output into it
 ```
 if [ "$XDG_SESSION_DESKTOP" = 'dwm' ]; then
-  (baru | xrootwin) &
+  (provider_bin | xrootwin) &
 fi
 ```
 
