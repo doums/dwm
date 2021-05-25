@@ -14,6 +14,29 @@
 - custom static icon for monocole layout - commit `65231a15`
 - custom bar padding - commit `f99491cf`
 - status drawn only on the main monitor - commit `a3f8bd4b`
-- focus the targeted window on `_NET_ACTIVE_WINDOW` event - commit #61e1ff07
+- focus the targeted window on `_NET_ACTIVE_WINDOW` event - commit `61e1ff07`
 
+#### build
+```
+make clean
+make
+```
+
+#### status bar
+dwm use the title value of the X root window as status bar.
+To use a status provider we need a small tool that sets the title of the X root window with provider's output. This tool is `xrootwin`.
+
+**build xrootwin**
+```
+cd xrootwin
+mkdir build; cd build
+cmake ..
+cmake --build .
+```
+then call it from a startup script like `.xprofile` and pipe the provider output into it
+```
+if [ "$XDG_SESSION_DESKTOP" = 'dwm' ]; then
+  (baru | xrootwin) &
+fi
+```
 
