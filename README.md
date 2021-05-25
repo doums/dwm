@@ -33,7 +33,7 @@ mkdir build; cd build
 cmake ..
 cmake --build .
 ```
-then call it from a startup script like `.xprofile` and pipe the provider output into it
+then call it from a startup script like `.xinitrc` or `.xprofile` and pipe the provider output into it
 ```
 if [ "$XDG_SESSION_DESKTOP" = 'dwm' ]; then
   (baru | xrootwin) &
